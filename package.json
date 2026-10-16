@@ -1,0 +1,69 @@
+{
+  "name": "medusa-notification-groundmail",
+  "version": "0.1.0",
+  "description": "Medusa v2 notification provider for Groundmail transactional email",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./providers/groundmail": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Groundmail/medusa-notification-groundmail.git"
+  },
+  "homepage": "https://docs.groundmail.dev/frameworks/medusa",
+  "bugs": {
+    "url": "https://github.com/Groundmail/medusa-notification-groundmail/issues"
+  },
+  "keywords": [
+    "medusa",
+    "medusajs",
+    "medusa-v2",
+    "medusa-plugin",
+    "medusa-plugin-integration",
+    "medusa-plugin-notification",
+    "medusa-provider",
+    "notification-provider",
+    "email",
+    "transactional-email",
+    "groundmail"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@medusajs/framework": "^2.0.0"
+  },
+  "dependencies": {
+    "groundmail": ">=0.14.5 <1.0.0"
+  },
+  "devDependencies": {
+    "@medusajs/framework": "2.21.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5",
+    "vitest": "^3.2.4",
+    "@types/node": "^22"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts --target node20 --external groundmail --external @medusajs/framework --clean",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  }
+}
