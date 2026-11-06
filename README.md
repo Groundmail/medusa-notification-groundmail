@@ -10,7 +10,7 @@
 <h1 align="center">Groundmail for Medusa</h1>
 
 <p align="center">
-  A <a href="https://medusajs.com">Medusa</a> v2 notification provider for the Groundmail transactional email API.<br>
+  A <a href="https://medusajs.com">Medusa</a> v2 notification provider for the Groundmail API.<br>
   Order confirmations, shipping updates and password resets go out on the <code>email</code> channel through Groundmail.
 </p>
 
@@ -99,8 +99,8 @@ Found a bug or want something added? [Open an issue](https://github.com/Groundma
 
 ## Why Groundmail
 
-- **Our own mail servers and IP space.** Your password resets and receipts don't share a pool with bulk marketing senders.
-- **Transactional email only.** No newsletters or cold outreach on the platform, which keeps the sending reputation clean.
+- **Separate streams.** Your sign-in codes never wait behind a newsletter.
+- **We run the servers.** Our own mail servers and IP space, so we can see and fix delivery problems ourselves.
 - **Start free.** 3,000 emails a month on the Free plan; Pro is 50,000 emails for $20/month. Dedicated IPs on Scale.
 - **Built for code and for agents.** REST API, SMTP, SDKs for Node, Python, Go, PHP and Ruby, a CLI, and an MCP server for Claude, ChatGPT and Cursor.
 
