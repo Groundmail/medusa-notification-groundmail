@@ -55,11 +55,11 @@
     "groundmail": ">=0.14.5 <1.0.0"
   },
   "devDependencies": {
-    "@medusajs/framework": "2.21.2",
+    "@medusajs/framework": "2.22.7",
+    "@types/node": "^22",
     "tsup": "^8.5.0",
     "typescript": "^5",
-    "vitest": "^3.2.4",
-    "@types/node": "^22"
+    "vitest": "^5.1.1"
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs --dts --target node20 --external groundmail --external @medusajs/framework --clean",
